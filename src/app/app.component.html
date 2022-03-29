@@ -1,0 +1,27 @@
+<div class="content">
+  <div class="nav">
+    <ng-container *ngFor="let item of items">
+      <div class="item"
+        [class.active]="selected?.title === item.title"
+        (click)="selected = item"
+        [routerLink]="item.router">
+        <img src="./../assets/images/side-menu/{{item.icon}}.svg"
+          alt="{{item.title}}">
+      </div>
+    </ng-container>
+  </div>
+  <div class="router">
+    <div class="content-header">
+      <div class="title">
+        <img src="./../assets/images/Union.svg"
+          alt="Vortex">
+        Vortex Studio
+      </div>
+      <div class="current-page"
+        *ngIf="selected">
+        {{selected.title}}
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

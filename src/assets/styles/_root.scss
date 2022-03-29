@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Vortex";
+  src: url("./../fonts/Comfortaa-Regular.ttf");
+  src: url("./../fonts/comfortaa-regular-webfont.woff") format("woff"),
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Vortex';
+  color: white;
+  animation: fadeIn 0.5s;
+
+  ::selection {
+    background-color: #EB01A5;
+  }
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background: linear-gradient(112.7deg, #EB01A5 1.37%, #5D01FB 98.36%), ;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

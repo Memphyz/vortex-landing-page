@@ -1,0 +1,31 @@
+:host {
+  display: grid;
+  grid-template-rows: minmax(200px, 600px) auto;
+  align-items: center;
+  position: relative;
+  height: 75%;
+
+  .illus {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 300px;
+      max-height: 600px;
+      transform: rotate(90deg);
+    }
+  }
+
+  .info {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
