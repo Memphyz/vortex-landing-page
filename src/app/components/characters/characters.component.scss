@@ -1,0 +1,113 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-auto-rows: 300px;
+  gap: 50px;
+  grid: none;
+
+  :nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 13;
+  }
+
+  :nth-child(2) {
+    grid-column-start: 6;
+    grid-column-end: 17;
+    grid-row-start: 2;
+  }
+
+  :nth-child(3) {
+    grid-column-start: 16;
+    grid-column-end: 28;
+  }
+
+  :nth-child(4) {
+    grid-column-start: 20;
+    grid-column-end: 31;
+    grid-row-start: 2;
+  }
+
+  @media screen and (max-width: 1800px) {
+    :nth-child(1) {
+      grid-column-start: 2;
+      grid-column-end: 11;
+    }
+
+    :nth-child(2) {
+      grid-column-start: 4;
+      grid-column-end: 13;
+    }
+
+    :nth-child(3) {
+      grid-column-start: 12;
+      grid-column-end: 21;
+    }
+
+    :nth-child(4) {
+      grid-column-start: 14;
+      grid-column-end: 22;
+    }
+  }
+
+  @media screen and (max-width: 1460px) {
+    gap: 30px;
+
+    :nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 11;
+    }
+
+    :nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 12;
+    }
+
+    :nth-child(3) {
+      grid-column-start: 11;
+      grid-column-end: 21;
+    }
+
+    :nth-child(4) {
+      grid-column-start: 12;
+      grid-column-end: 22;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(320.69deg, #4900A7 7.02%, #88006A 89.17%);
+    box-shadow: 0px 0px 21.8456px rgb(0 0 0 / 32%);
+    border-radius: 31px;
+    padding: 14px;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 33px;
+      display: flex;
+      align-items: center;
+      color: #FFFFFF;
+    }
+
+    .info {
+      display: flex;
+      gap: 55px;
+      align-items: center;
+    }
+  }
+}

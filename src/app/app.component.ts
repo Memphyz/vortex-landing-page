@@ -20,16 +20,19 @@ export class AppComponent implements AfterViewChecked {
     },
     {
       icon: 'Character',
-      title: 'Personagens'
+      title: 'Personagens',
+      router: 'characters'
     },
     {
       icon: 'Union',
       title: 'Time Vortex',
+      router: 'team',
       useUnderIcon: true
     },
     {
       icon: 'about',
-      title: 'Inscrição antecipada'
+      title: 'Inscrição antecipada',
+      router: 'early-access'
     }
   ]
 

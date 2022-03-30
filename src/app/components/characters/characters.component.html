@@ -1,0 +1,12 @@
+<ng-container *ngFor="let character of characters">
+  <div class="container">
+    <div class="title">{{character.title}}</div>
+    <div class="info">
+      <img src="./../../../assets/images/{{character.pic}}.svg"
+        alt="{{character.pic}}.svg">
+      <div class="content"
+        [innerHtml]="character.desc">
+      </div>
+    </div>
+  </div>
+</ng-container>
