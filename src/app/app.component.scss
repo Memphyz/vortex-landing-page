@@ -6,34 +6,63 @@
 
   .content {
     align-self: center;
-    width: calc(100% - 248px);
-    height: calc(100% - 132px);
+    width: calc(100% - 150px);
+    height: calc(100% - 70px);
     background: linear-gradient(133.74deg, #4900A7 2.21%, #88006A 98.14%);
     box-shadow: 0px 0px 57.881px rgba(0, 0, 0, 0.55);
     border-radius: 32px;
     display: flex;
     position: relative;
 
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 40px);
+      height: calc(100% - 70px);
+      position: relative;
+      bottom: 15px;
+      border-radius: 10px;
+    }
+
     .router {
       width: 100%;
-      padding: 30px 70px;
       transition: all 0.5s;
       display: flex;
       flex-direction: column;
       gap: 10px;
+      padding: 29px 30px 30px 60px;
       height: 90%;
+
+      @media screen and (max-width: 768px) {
+        padding: 20px !important;
+        height: 93% !important;
+      }
 
       .content-header {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+
+        @media screen and (max-width: 1056px) {
+          justify-content: center;
+          gap: 10px;
+
+          .title {
+            font-size: 25px !important;
+          }
+
+          .current-page {
+            font-size: 30px !important;
+            line-height: 50px !important;
+          }
+        }
 
         .title {
           font-family: 'Vortex';
           font-style: normal;
           font-weight: 700;
-          font-size: 32.7207px;
+          font-size: 32px;
           line-height: 36px;
           color: #FFFFFF;
+          -webkit-user-select: none;
           user-select: none;
           position: relative;
           display: flex;
@@ -68,6 +97,27 @@
       gap: 37px;
       top: 13%;
       right: calc(100% - 60px);
+
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        right: 0;
+        left: 0;
+        top: calc(100% - 45px);
+        padding: 15px;
+        gap: 10px;
+        width: calc(100% - 60px);
+        margin: 0 auto;
+        border-radius: 10px;
+
+        .item {
+          width: fit-content !important;
+
+          img {
+            max-width: 50px;
+            max-height: 60px;
+          }
+        }
+      }
 
       .item {
         cursor: pointer;
