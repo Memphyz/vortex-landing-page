@@ -78,6 +78,9 @@
           line-height: 82px;
           color: #FFFFFF;
           animation: fadeIn 0.5s;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
       }
     }
@@ -110,6 +113,7 @@
         border-radius: 10px;
 
         .item {
+          width: -moz-fit-content;
           width: fit-content !important;
 
           img {

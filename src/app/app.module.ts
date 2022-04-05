@@ -8,7 +8,9 @@ import { TeamComponent } from './components/team/team.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -23,6 +25,21 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      autoDismiss: false,
+      closeButton: false,
+      newestOnTop: true,
+      disableTimeOut: false,
+      countDuplicates: false,
+      easeTime: 300,
+      enableHtml: false,
+      preventDuplicates: true,
+      timeOut: 5000,
+      progressBar: true,
+      progressAnimation: 'decreasing',
+      tapToDismiss: true,
+    }),
     CommonModule,
     RouterModule
   ],

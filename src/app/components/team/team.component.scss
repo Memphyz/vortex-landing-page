@@ -1,0 +1,95 @@
+:host {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1856px) {
+    overflow-y: auto;
+  }
+
+  .integrant {
+    background: linear-gradient(320.69deg, #4900a7 7.02%, #88006a 89.17%);
+    box-shadow: 0px 0px 51.7133px rgba(31, 31, 31, 0.62);
+    border-radius: 12.9897px;
+    padding: 20px;
+    position: relative;
+    min-width: 512px;
+    min-height: 262px;
+
+    @media screen and (max-width: 765px) {
+      min-width: unset;
+      width: 100%;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      text-shadow: 0px 0px 16.0886px rgba(0, 0, 0, 0.42);
+      padding-left: 60px;
+      padding-bottom: 30px;
+      position: relative;
+
+      @media screen and (max-width: 765px) {
+        font-size: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-top: 10px;
+      }
+
+      &::before {
+        content: "";
+        background-image: url(./../../../assets/images/person.svg);
+        background-size: contain;
+        position: absolute;
+        top: -19px;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media screen and (max-width: 765px) {
+          top: -10px;
+        }
+      }
+    }
+
+    .activies {
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 10px;
+
+      &::before {
+        content: "";
+        height: calc(100% + 4px);
+        width: 1px;
+        background: #fff;
+        position: absolute;
+        top: -19px;
+        left: 29px;
+      }
+
+      .activie {
+        position: relative;
+        padding: 10px;
+        padding-top: 0px;
+        &::before {
+          content: "";
+          background-image: url(./../../../assets/images/arrow.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: top;
+          width: 27px;
+          height: 50px;
+          position: absolute;
+          left: -29px;
+          top: -28px;
+        }
+      }
+    }
+  }
+}

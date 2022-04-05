@@ -1,1 +1,14 @@
-<p>team works!</p>
+<ng-container *ngFor="let item of team">
+  <div class="integrant">
+    <div class="name">
+      {{item.name}}
+    </div>
+    <div class="activies">
+      <ng-container *ngFor="let activity of item.activities">
+        <div class="activie">
+          {{activity}}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

@@ -15,6 +15,10 @@
       max-width: 300px;
       max-height: 600px;
       transform: rotate(90deg);
+
+      @media screen and (max-width: 765px) {
+        max-height: 300px;
+      }
     }
   }
 
@@ -26,6 +30,10 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
+    @media screen and (max-width: 765px) {
+      font-size: 5vw;
+      line-height: 8vw;
+    }
   }
 }
