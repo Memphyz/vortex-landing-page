@@ -5,6 +5,9 @@
   justify-content: center;
   flex-wrap: wrap;
 
+  @media screen and (max-height: 800px) {
+    overflow-y: auto;
+  }
   @media screen and (max-width: 1856px) {
     overflow-y: auto;
   }
@@ -65,7 +68,7 @@
 
       &::before {
         content: "";
-        height: calc(100% + 4px);
+        height: 100%;
         width: 1px;
         background: #fff;
         position: absolute;

@@ -1,4 +1,9 @@
-import { AfterViewChecked, ChangeDetectorRef, Component } from '@angular/core';
+import {
+  AfterViewChecked,
+  ChangeDetectorRef,
+  Component,
+  HostListener
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -36,6 +41,8 @@ export class AppComponent implements AfterViewChecked {
     }
   ]
 
+  public contentHeigth = '';
+
   public selected: any;
 
   constructor(private readonly route: Router, private readonly cd: ChangeDetectorRef) { cd.detach() }
@@ -43,7 +50,12 @@ export class AppComponent implements AfterViewChecked {
   public ngAfterViewChecked(): void {
     const url = this.route.url.substring(1)
     this.selected = this.items.find(item => item.router === url);
+    this.onResize();
     this.cd.detectChanges();
+  }
 
+  @HostListener('window:resize', ['$event'])
+  public onResize(): void {
+    this.contentHeigth = `--content-height: ${(document.querySelector('.content[contentref]') as any)?.offsetHeight}px`
   }
 }

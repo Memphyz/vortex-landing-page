@@ -3,7 +3,11 @@
   justify-content: space-between;
   height: 100%;
   padding: 30px;
-  gap: 30px;
+  gap: 65px;
+
+  @media screen and (max-width: 768px) {
+    overflow-y: auto;
+  }
 
   @media screen and (max-width: 1130px) {
     flex-direction: column-reverse;
@@ -13,7 +17,6 @@
     @media screen and (max-width: 450px) {
       overflow: auto;
     }
-
   }
 
   .thanks {
@@ -59,7 +62,6 @@
         font-weight: 700;
         font-size: 22px;
         line-height: 36px;
-
       }
 
       img {
@@ -70,13 +72,19 @@
   }
 
   .subscribe {
-    max-width: 500px;
+    max-width: 1000px;
+    width: 100%;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
+    @media screen and (min-width: 1130px) {
+      justify-content: flex-end;
+    }
 
     .card {
+      width: 40vw;
       padding: 30px;
-      background: linear-gradient(320deg, #4900A7 7%, #88006A 89%);
+      background: linear-gradient(320deg, #4900a7 7%, #88006a 89%);
       box-shadow: 0px 0px 87px rgba(0, 0, 0, 0.33);
       border-radius: 30px;
       display: flex;
@@ -84,25 +92,39 @@
       gap: 30px;
       height: fit-content;
 
+      @media screen and (max-width: 1130px) {
+        width: 100%;
+      }
+
       .header {
         position: relative;
-        font-size: 18px;
+        font-size: 1.6vw;
         font-weight: 500;
         display: flex;
         gap: 10px;
         align-items: center;
 
+        @media screen and (min-width: 2024px) {
+          font-size: 35px;
+        }
+        @media screen and (max-width: 1124px) {
+          font-size: 18px;
+        }
+
         img {
           width: 40px;
           height: 40px;
+          transform: rotate(-40deg);
         }
       }
 
       .content {
         display: flex;
         font-size: 17px;
+        justify-content: space-between;
         gap: 20px;
         line-height: 20px;
+        width: 100%;
         align-items: flex-end;
 
         @media screen and (max-width: 450px) {
@@ -110,20 +132,37 @@
         }
 
         label {
-          font-size: 18px;
-
+          font-size: 1.2vw;
+          line-height: 1.2vw;
+          @media screen and (min-width: 2024px) {
+            max-width: unset;
+            width: 100%;
+            font-size: 25px;
+            line-height: 30px;
+          }
+          @media screen and (max-width: 1124px) {
+            font-size: 18px;
+            line-height: unset;
+          }
+          max-width: 400px;
         }
 
         .fields {
           display: flex;
           flex-direction: column;
+          width: 100%;
+          max-width: 450px;
           gap: 10px;
-
-          input {
-            margin-top: 10px;
-
-            @media screen and (max-width: 450px) {
+          label {
+            width: 100%;
+            max-width: unset;
+            input {
+              margin-top: 10px;
               width: 100%;
+
+              @media screen and (max-width: 450px) {
+                width: 100%;
+              }
             }
           }
         }

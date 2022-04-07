@@ -1,5 +1,7 @@
-<div class="content">
-  <div class="nav">
+<div class="content"
+  contentRef>
+  <div class="nav"
+    [style]="contentHeigth">
     <ng-container *ngFor="let item of items">
       <div class="item"
         [class.active]="selected?.title === item.title"
