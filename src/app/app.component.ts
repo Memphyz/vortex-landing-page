@@ -4,7 +4,8 @@ import {
   Component,
   HostListener
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -51,6 +52,14 @@ export class AppComponent implements AfterViewChecked {
     const url = this.route.url.substring(1)
     this.selected = this.items.find(item => item.router === url);
     this.onResize();
+
+    this.route.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe({
+      next: () => {
+        if (this.route.url === '/') {
+          this.route.navigate(['home'])
+        }
+      }
+    });
     this.cd.detectChanges();
   }
 
