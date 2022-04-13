@@ -1,16 +1,18 @@
 :host {
-  @media screen and (max-width: 1220px) {
-    overflow-y: auto;
-  }
+
+  overflow-y: auto;
 
   .characters {
+    display: -ms-grid;
     display: grid;
     gap: 20px;
     padding: 10px;
     grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
+
     @media screen and (max-width: 1148px) {
       display: flex;
       flex-wrap: wrap;
+
       @media screen and (max-width: 575px) {
         grid-template-columns: unset;
       }
@@ -32,6 +34,7 @@
 
       @media screen and (max-width: 575px) {
         margin: unset;
+
         .info {
           flex-direction: column;
         }
@@ -44,6 +47,7 @@
 
         .info {
           gap: 20px !important;
+
           .content {
             font-size: 1em;
           }

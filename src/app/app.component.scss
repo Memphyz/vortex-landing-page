@@ -34,7 +34,7 @@
       flex-direction: column;
       gap: 10px;
       padding: 29px 30px 30px 60px;
-      height: 90%;
+      height: 100%;
 
       @media screen and (max-width: 768px) {
         padding: 20px !important;
@@ -79,7 +79,7 @@
           font-family: "Vortex";
           font-style: normal;
           font-weight: 700;
-          font-size: 73.6216px;
+          font-size: 60px;
           padding: 5px 0px;
           line-height: 82px;
           color: #ffffff;
@@ -122,6 +122,7 @@
           width: -moz-fit-content;
           width: fit-content !important;
         }
+
         img {
           max-width: 50px;
           max-height: 60px;
